@@ -48,27 +48,21 @@ public class OrderActivity extends AppCompatActivity {
         getSupportActionBar().setTitle("Home");
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
-        // retrieve data from main activity
         Bundle extras = getIntent().getExtras();
         imageID = extras.getInt("Image Extra");
         imageName = extras.getString("Name Extra");
         imageDesc = extras.getString("Description Extra");
 
-        // declare notification manager
         notifyManager = NotificationManagerCompat.from(getApplicationContext());
 
-
-        // attach views
         dessertImage = findViewById(R.id.order_image);
         dessertName = findViewById(R.id.order_textview);
         dessertDesc = findViewById(R.id.dessert_desc);
 
-        // set values
         dessertImage.setImageResource(imageID);
         dessertName.setText(imageName);
         dessertDesc.setText(imageDesc);
 
-        // create pending activity for notification
         Bundle activityBundle = new Bundle();
         activityBundle.putString(DESSERT_NAME, imageName);
         activityBundle.putInt(DESSERT_ID, imageID);
@@ -82,7 +76,6 @@ public class OrderActivity extends AppCompatActivity {
         largeIcon = BitmapFactory.decodeResource(getResources(), imageID);
         notifyText = "Your " + imageName + " is on the way!";
 
-        // attach and set onclick for fab to send order notification
         FloatingActionButton fab = findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -110,5 +103,13 @@ public class OrderActivity extends AppCompatActivity {
                 }
             }
         });
+    }
+
+    @Override
+    protected void onSaveInstanceState(Bundle outState) {
+        outState.putString(DESSERT_NAME, imageName);
+        outState.putInt(DESSERT_ID, imageID);
+        outState.putString(DESSERT_DESC, imageDesc);
+        super.onSaveInstanceState(outState);
     }
 }
