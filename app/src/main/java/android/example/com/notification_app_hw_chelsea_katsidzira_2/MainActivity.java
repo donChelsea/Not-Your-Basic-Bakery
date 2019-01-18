@@ -101,7 +101,7 @@ public class MainActivity extends AppCompatActivity {
                 "Oreo Fantasy",
                 "Southern Bumpkin \nPumpkin Pie",
                 "Raspberry White \nTruffle Macarons",
-                "Strawberry Marshmallow Pie",
+                "Strawberry \nMarshmallow Pie",
                 "Godzilla's Eclair",
                 "Gingerbread Cookie Cheesecake"));
 
