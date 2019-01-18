@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Notification_App_HW_CHELSEA_KATSIDZIRA_2</string>
+    <string name="title_activity_order">OrderActivity</string>
+    <string name="order_banner">Your choice for today is:</string>
+    <string name="dessert_name">Dessert Name</string>
+    <string name="dessert_description">Dessert Description</string>
+    <string name="bakery_name">Not Your Basic Bakery</string>
+</resources>
