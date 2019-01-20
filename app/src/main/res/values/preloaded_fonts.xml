@@ -3,5 +3,8 @@
     <array name="preloaded_fonts" translatable="false">
         <item>@font/baloo</item>
         <item>@font/cabin</item>
+        <item>@font/comfortaa_bold</item>
+        <item>@font/comfortaa_light</item>
+        <item>@font/pacifico</item>
     </array>
 </resources>
